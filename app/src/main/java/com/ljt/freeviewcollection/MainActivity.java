@@ -6,6 +6,9 @@ import android.os.Bundle;
 import com.ljt.freeviewcollection.customcircle.CustomCicleView;
 import com.ljt.freeviewcollection.customcircle.CustomCircleChart;
 
+import java.util.ArrayList;
+import java.util.List;
+
 /*
 * 方式1 继承View
 * （1）继承自View创建自定义控件
@@ -26,14 +29,14 @@ public class MainActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
-        initView();
+//        initView();
     }
 
     private void initView() {
         //实现动态缩放圆形
 //        mCicleView = (CustomCicleView) findViewById(R.id.ccv_main1);
-
-        cChart = (CustomCircleChart) findViewById(R.id.cc_chart2);
+        //圆环图表
+//        cChart = (CustomCircleChart) findViewById(R.id.cc_chart2);
 //        swichCustomView(1);
     }
 
