@@ -42,6 +42,13 @@
         <!--android:thumb="@drawable/switch_ios_thumb"-->
         <!--android:track="@drawable/switch_ios_track_selector" />-->
 
+    <Button
+        android:id="@+id/btn_main"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Click"
+        />
+
     <com.ljt.freeviewcollection.customcreditscore.CreditScoreView
         android:id="@+id/creditscore_main"
         android:layout_width="300dp"
