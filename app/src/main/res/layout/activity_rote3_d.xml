@@ -1,13 +1,19 @@
 <?xml version="1.0" encoding="utf-8"?>
-<RelativeLayout
+<LinearLayout
     xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
     android:id="@+id/activity_rote3_d"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:orientation="vertical"
     tools:context="com.ljt.freeviewcollection.rote3dview.Rote3DActivity">
-<com.ljt.freeviewcollection.rote3dview.Rote3DView
-    android:id="@+id/r3dview"
-    android:layout_width="match_parent"
-    android:layout_height="match_parent"></com.ljt.freeviewcollection.rote3dview.Rote3DView>
-</RelativeLayout>
+    <!--左右转动-->
+<!--<com.ljt.freeviewcollection.rote3dview.Rote3DView-->
+    <!--android:id="@+id/r3dview"-->
+    <!--android:layout_width="match_parent"-->
+    <!--android:layout_height="match_parent"/>-->
+
+    <com.ljt.freeviewcollection.rote3dview.CameraTestView
+        android:layout_width="200dp"
+        android:layout_height="200dp"/>
+</LinearLayout>
