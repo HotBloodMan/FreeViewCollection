@@ -179,8 +179,6 @@ public class Rote3DView  extends ViewGroup{
             mWidth=getWidth();
         }
     }
-
-
         //实现立体效果 如果不加 是平移的效果
         /*
      * 当进行View滑动时，会导致当前的View无效，该函数的作用是对View进行重新绘制 调用drawScreen函数
