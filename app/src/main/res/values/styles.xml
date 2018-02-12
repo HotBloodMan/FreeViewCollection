@@ -10,4 +10,10 @@
 <style name="SwitchTheme" parent="@android:style/TextAppearance.Small">
     <item name="android:textColor">@color/switch_text_selector</item>
 </style>
+
+    <declare-styleable name="GridImageViewGroup">
+        <attr name="childVerticalSpce" format="dimension"/>
+        <attr name="childHorizontalSpace" format="dimension"/>
+        <attr name="columnNum" format="integer"/>
+    </declare-styleable>
 </resources>
