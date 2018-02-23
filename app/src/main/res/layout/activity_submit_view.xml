@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+   >
+
+    <com.ljt.freeviewcollection.submitbutton.SubmitButton
+        android:id="@+id/sbtn_loading"
+        android:layout_width="200dp"
+        android:layout_height="50dp"
+        android:layout_centerInParent="true"
+        app:buttonText="Submit"
+        app:buttonTextSize="25sp"
+        />
+    <com.ljt.freeviewcollection.submitbutton.SubmitButton
+        android:id="@+id/sbtn_progress"
+        android:layout_width="200dp"
+        android:layout_height="50dp"
+        android:layout_centerInParent="true"
+        android:layout_marginTop="30dp"
+        android:visibility="gone"
+        app:buttonText="Submit"
+        app:progressStyle="progress"
+        app:buttonTextSize="25sp"
+        />
+
+    <Button
+        android:id="@+id/btn_succeed"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_margin="10dp"
+        android:text="succeed" />
+
+
+    <Button
+        android:id="@+id/btn_failed"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_centerHorizontal="true"
+        android:layout_margin="10dp"
+        android:text="failed" />
+
+    <Button
+        android:id="@+id/btn_reset"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentRight="true"
+        android:layout_margin="10dp"
+        android:text="reset" />
+
+    <Switch
+        android:id="@+id/switch1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="20dp"
+        android:layout_marginTop="20dp"
+        android:text="Progress Style Switch " />
+
+</RelativeLayout>

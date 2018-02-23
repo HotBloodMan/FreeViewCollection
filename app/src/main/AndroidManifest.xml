@@ -11,9 +11,13 @@
         <activity android:name=".MainActivity">
         </activity>
         <activity android:name=".rote3dview.Rote3DActivity">
-
         </activity>
         <activity android:name=".customviewgroup.CusViewGroupActivity">
+
+        </activity>
+        <activity android:name=".bounceloadingview.BounceActivity">
+        </activity>
+        <activity android:name=".submitbutton.SubmitViewActivity">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN"/>
 

@@ -1,8 +1,12 @@
 package com.ljt.freeviewcollection.bounceloadingview;
 
+import android.animation.Animator;
+import android.animation.AnimatorListenerAdapter;
 import android.animation.ValueAnimator;
 import android.content.Context;
+import android.content.res.Resources;
 import android.graphics.Bitmap;
+import android.graphics.BitmapFactory;
 import android.graphics.Canvas;
 import android.graphics.Color;
 import android.graphics.Matrix;
@@ -82,7 +86,27 @@ public class BounceLoadingView extends View{
         mShadowPaint.setStyle(Paint.Style.FILL);
         mShadowPaint.setColor(mShadowColor);
 
+
         mBitmapPaint = new Paint(Paint.ANTI_ALIAS_FLAG);
+    }
+
+    public void addBitmap(int bitMapId){
+        try {
+            Bitmap bitmap = BitmapFactory.decodeResource(getResources(), bitMapId);
+            addBitmap(bitmap);
+        }catch (Resources.NotFoundException e){
+            e.printStackTrace();
+        }
+    }
+    public void addBitmap(Bitmap bitmap){
+        if(bitmap!=null){
+            mBitmapList.add(bitmap);
+        }
+    }
+    public void addBitmaps(ArrayList<Bitmap> bitmaps){
+        if(bitmaps != null){
+            mBitmapList.addAll(bitmaps);
+        }
     }
 
     @Override
@@ -120,6 +144,7 @@ public class BounceLoadingView extends View{
         if(animator==null){
             animator=ValueAnimator.ofFloat(0f,1f,0f);
             animator.setInterpolator(new AccelerateDecelerateInterpolator());
+            animator.setRepeatCount(ValueAnimator.INFINITE);
             animator.addUpdateListener(new ValueAnimator.AnimatorUpdateListener() {
                 @Override
                 public void onAnimationUpdate(ValueAnimator animation) {
@@ -130,7 +155,29 @@ public class BounceLoadingView extends View{
                     }
                 }
             });
+
+            animator.addListener(new AnimatorListenerAdapter() {
+                @Override
+                public void onAnimationStart(Animator animation) {
+                    //重置
+                    mCurrentIndex= 0;
+                    mCurrentBitmap=mBitmapList.get(mCurrentIndex);
+                }
+
+                @Override
+                public void onAnimationRepeat(Animator animation) {
+                    if(mBitmapList !=null && mBitmapList.size()>0){
+                        mCurrentIndex ++;
+                        if(mCurrentIndex >= mBitmapList.size()){
+                            mCurrentIndex=0;
+                        }
+                        mCurrentBitmap=mBitmapList.get(mCurrentIndex);
+                    }
+                }
+            });
         }
+        animator.setDuration(mDuration);
+        animator.start();
     }
 
     public void stop(){
@@ -139,6 +186,18 @@ public class BounceLoadingView extends View{
             animator = null;
         }
     }
+/*
+*   设置阴影的颜色
+*
+* */
+    public void setShadowColor(int shadowColor){
+        this.mShadowColor=shadowColor;
+        if(mShadowPaint !=null){
+            mShadowPaint.setColor(mShadowColor);
+            postInvalidate();
+        }
+    }
+
 
     @Override
     protected void onDetachedFromWindow() {
