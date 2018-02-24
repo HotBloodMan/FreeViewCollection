@@ -13,11 +13,16 @@
         <activity android:name=".rote3dview.Rote3DActivity">
         </activity>
         <activity android:name=".customviewgroup.CusViewGroupActivity">
-
         </activity>
         <activity android:name=".bounceloadingview.BounceActivity">
         </activity>
         <activity android:name=".submitbutton.SubmitViewActivity">
+
+        </activity>
+        <activity android:name=".artsearch.circle.ArtSearchCircleActivity">
+
+        </activity>
+        <activity android:name=".artsearch.horizontalscrollview.DemoActivity_2">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN"/>
 

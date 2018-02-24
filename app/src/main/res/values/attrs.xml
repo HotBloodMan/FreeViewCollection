@@ -11,4 +11,9 @@
             <enum name="progress" value="1"/>
         </attr>
     </declare-styleable>
+
+    <declare-styleable name="CircleViewPadding">
+        <attr name="circleColor" format="color"/>
+
+    </declare-styleable>
 </resources>
