@@ -92,6 +92,7 @@ public class HorizontalScrollViewEx extends ViewGroup {
         return intercepted;
     }
 
+    //判断速度
     @Override
     public boolean onTouchEvent(MotionEvent event) {
         Log.d(TAG,TAG+" ----->>>onTouchEvent ");
@@ -112,15 +113,27 @@ public class HorizontalScrollViewEx extends ViewGroup {
             break;
         }
         case MotionEvent.ACTION_UP: {
+            /*
+            * 这部分是重点
+            * */
             int scrollX = getScrollX();
             mVelocityTracker.computeCurrentVelocity(1000);
+             Log.d(TAG,TAG+" ----->>>mChildIndex= "+mChildIndex);
             float xVelocity = mVelocityTracker.getXVelocity();
             if (Math.abs(xVelocity) >= 50) {
+                //速度大于50，还需要判断是否翻页，因为由手控制，翻页index+1,没有index-1;
                 mChildIndex = xVelocity > 0 ? mChildIndex - 1 : mChildIndex + 1;
+                Log.d(TAG,TAG+" ----->>>mChildIndex 44= "+mChildIndex);
             } else {
+                Log.d(TAG,TAG+" ----->>>mChildIndex 51 scrollX= "+scrollX+" mChildWidth= "+mChildWidth);
+                //scrollX 滑动的距离 mChildWidth 屏幕的宽度
+                //(scrollX + mChildWidth / 2) / mChildWidth;表示滑动的距离超过屏幕的一半，应该翻页。
                 mChildIndex = (scrollX + mChildWidth / 2) / mChildWidth;
+                Log.d(TAG,TAG+" ----->>>mChildIndex 55= "+mChildIndex);
             }
+            Log.d(TAG,TAG+" ----->>>mChildrenSize - 1= "+mChildrenSize);
             mChildIndex = Math.max(0, Math.min(mChildIndex, mChildrenSize - 1));
+            Log.d(TAG,TAG+" ----->>>mChildIndex2222= "+mChildIndex);
             int dx = mChildIndex * mChildWidth - scrollX;
             smoothScrollBy(dx, 0);
             mVelocityTracker.clear();
@@ -189,6 +202,7 @@ public class HorizontalScrollViewEx extends ViewGroup {
 
     private void smoothScrollBy(int dx, int dy) {
         Log.d(TAG,TAG+" ----->>>smoothScrollBy ");
+       //需要思考Scroller的工作原理
         mScroller.startScroll(getScrollX(), 0, dx, 0, 500);
         invalidate();
     }
@@ -196,6 +210,7 @@ public class HorizontalScrollViewEx extends ViewGroup {
     @Override
     public void computeScroll() {
         Log.d(TAG,TAG+" ----->>>computeScroll ");
+       // mScroller.computeScrollOffset() true说明滑动还没有停止
         if (mScroller.computeScrollOffset()) {
             scrollTo(mScroller.getCurrX(), mScroller.getCurrY());
             postInvalidate();
