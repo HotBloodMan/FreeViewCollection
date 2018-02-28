@@ -8,10 +8,12 @@ import com.ljt.freeviewcollection.R;
 
 public class DiscrollActivity extends Activity {
 
+    protected DiscrollView mDiscrollView;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_discroll);
-        MyTextView mv= (MyTextView) findViewById(R.id.mtv);
+//        MyTextView mv= (MyTextView) findViewById(R.id.mtv);
+        mDiscrollView= (DiscrollView) findViewById(R.id.layout);
     }
 }
