@@ -14,6 +14,14 @@
 
     <declare-styleable name="CircleViewPadding">
         <attr name="circleColor" format="color"/>
-
     </declare-styleable>
+
+    <declare-styleable name="test">
+        <attr name="android:text"/>
+        <attr name="testAttr" format="integer"/>
+    </declare-styleable>
+
+    <!-- styleable 的含义是什么？可以不写嘛？-->
+    <attr name="testAttr2" format="integer"/>
+
 </resources>

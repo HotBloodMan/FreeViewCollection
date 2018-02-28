@@ -17,12 +17,12 @@
         <activity android:name=".bounceloadingview.BounceActivity">
         </activity>
         <activity android:name=".submitbutton.SubmitViewActivity">
-
         </activity>
         <activity android:name=".artsearch.circle.ArtSearchCircleActivity">
-
         </activity>
         <activity android:name=".artsearch.horizontalscrollview.DemoActivity_2">
+        </activity>
+        <activity android:name=".viewframe.DiscrollActivity">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN"/>
 

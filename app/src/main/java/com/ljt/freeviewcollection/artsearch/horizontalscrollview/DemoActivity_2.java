@@ -11,7 +11,6 @@ import android.view.View;
 import android.view.ViewGroup;
 import android.widget.AdapterView;
 import android.widget.ArrayAdapter;
-import android.widget.ImageView;
 import android.widget.ListView;
 import android.widget.TextView;
 import android.widget.Toast;
@@ -47,6 +46,7 @@ public class DemoActivity_2 extends Activity {
             createList(layout);
             mListContainer.addView(layout);
         }
+
     }
 
     private void createList(ViewGroup layout) {
