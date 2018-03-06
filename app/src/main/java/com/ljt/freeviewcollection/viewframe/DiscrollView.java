@@ -64,8 +64,8 @@ public class DiscrollView extends ScrollView {
     }
 
     private void onScrollChanged(int top) {
-        int scrollViewHeight = getHeight();
-        int scrollViewBottom = getAbsoluteBottom();
+        int scrollViewHeight = getHeight(); //父布局的高度
+        int scrollViewBottom = getAbsoluteBottom(); //
         int scrollViewHalfHeight=scrollViewHeight/2;
 
         for(int index=1;index<mContent.getChildCount();index++){
