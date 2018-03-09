@@ -23,9 +23,11 @@
         <activity android:name=".artsearch.horizontalscrollview.DemoActivity_2">
         </activity>
         <activity android:name=".viewframe.DiscrollActivity">
-
         </activity>
         <activity android:name=".paperfly.PaperFlayActivity">
+
+        </activity>
+        <activity android:name=".viewframesimple.SimpleFrameActivity">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN"/>
 

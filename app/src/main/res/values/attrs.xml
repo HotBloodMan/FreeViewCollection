@@ -42,4 +42,19 @@
         <flag name="fromRight" value="0x08"/>
     </attr>
 
+    <!--viewframesimple-->
+    <declare-styleable name="AnimalFrame">
+        <attr name="alphaFrom" format="float"/>
+        <attr name="alphaTo" format="float"/>
+        <attr name="scaleX" format="boolean"/>
+
+        <attr name="translate">
+            <flag name="fromBottom" value="0x1"/>
+            <flag name="fromTop" value="0x2"/>
+            <flag name="fromLeft" value="0x4"/>
+            <flag name="fromRight" value="0x8"/>
+        </attr>
+
+    </declare-styleable>
+
 </resources>
