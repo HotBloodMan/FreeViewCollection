@@ -25,7 +25,6 @@
         <activity android:name=".viewframe.DiscrollActivity">
         </activity>
         <activity android:name=".paperfly.PaperFlayActivity">
-
         </activity>
         <activity android:name=".viewframesimple.SimpleFrameActivity">
             <intent-filter>
@@ -33,6 +32,8 @@
 
                 <category android:name="android.intent.category.LAUNCHER"/>
             </intent-filter>
+        </activity>
+        <activity android:name=".customwanim.PageActivity">
         </activity>
     </application>
 
