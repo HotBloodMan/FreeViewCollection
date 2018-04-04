@@ -125,7 +125,8 @@ public class HorizontalScrollViewEx extends ViewGroup {
                 mChildIndex = xVelocity > 0 ? mChildIndex - 1 : mChildIndex + 1;
                 Log.d(TAG,TAG+" ----->>>mChildIndex 44= "+mChildIndex);
             } else {
-                Log.d(TAG,TAG+" ----->>>mChildIndex 51 scrollX= "+scrollX+" mChildWidth= "+mChildWidth);
+                Log.d(TAG,TAG+"" +
+                        " ----->>>mChildIndex 51 scrollX= "+scrollX+" mChildWidth= "+mChildWidth);
                 //scrollX 滑动的距离 mChildWidth 屏幕的宽度
                 //(scrollX + mChildWidth / 2) / mChildWidth;表示滑动的距离超过屏幕的一半，应该翻页。
                 mChildIndex = (scrollX + mChildWidth / 2) / mChildWidth;

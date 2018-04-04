@@ -21,17 +21,18 @@
         <activity android:name=".artsearch.circle.ArtSearchCircleActivity">
         </activity>
         <activity android:name=".artsearch.horizontalscrollview.DemoActivity_2">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN"/>
+
+                <category android:name="android.intent.category.LAUNCHER"/>
+            </intent-filter>
         </activity>
         <activity android:name=".viewframe.DiscrollActivity">
         </activity>
         <activity android:name=".paperfly.PaperFlayActivity">
         </activity>
         <activity android:name=".viewframesimple.SimpleFrameActivity">
-            <intent-filter>
-                <action android:name="android.intent.action.MAIN"/>
 
-                <category android:name="android.intent.category.LAUNCHER"/>
-            </intent-filter>
         </activity>
         <activity android:name=".customwanim.PageActivity">
         </activity>

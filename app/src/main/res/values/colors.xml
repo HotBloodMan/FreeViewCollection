@@ -5,6 +5,7 @@
     <color name="colorAccent">#FF4081</color>
 
 
+    <color name="black">#ff000000</color>
     <color name="white">#ffffffff</color>
     <color name="lighter_gray">#ffd3d3d3</color>
     <color name="gray">#ff808080</color>
@@ -13,5 +14,4 @@
     <color name="sandybrown">#fff4a460</color>
     <color name="dimgray">#ff696969</color>
     <color name="silver">#ffc0c0c0</color>
-    <color name="black">#ff000000</color>
 </resources>
